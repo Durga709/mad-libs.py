@@ -1,0 +1,40 @@
+def mad_libs():
+    print("🎭 Welcome to Mad Libs Generator! 🎭")
+    print("Please enter the following words:\n")
+    
+    # Get user inputs
+    adjective1 = input("Enter an adjective: ")
+    noun1 = input("Enter a noun: ")
+    verb1 = input("Enter a verb: ")
+    animal = input("Enter an animal: ")
+    food = input("Enter a food: ")
+    emotion = input("Enter an emotion: ")
+    place = input("Enter a place: ")
+    
+    # Create the story
+    story = f"""
+    📖 YOUR MAD LIB STORY 📖
+    
+    Today I saw the most {adjective1} {noun1} I've ever seen!
+    It decided to {verb1} all the way to {place}. 
+    On the way, it met a {animal} who was eating {food}.
+    They both felt so {emotion} that they became best friends!
+    
+    THE END 🎉
+    """
+    
+    print(story)
+
+# Run the game
+if __name__ == "__main__":
+    mad_libs()
+    
+    # Ask if user wants to play again
+    while True:
+        play_again = input("\nWould you like to play again? (yes/no): ").lower()
+        if play_again in ['yes', 'y']:
+            print("\n" + "="*40)
+            mad_libs()
+        else:
+            print("Have a fun, Thanks for playing👋")
+            break
